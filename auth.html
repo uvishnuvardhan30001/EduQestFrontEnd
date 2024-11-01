@@ -17,7 +17,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="auth.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -46,6 +46,20 @@
         </div>
     </div>
 
-   
+    <section class="contact-section">
+        <form class="contact-form">
+            <input type="text" class="form-control" placeholder="Name" required>
+            <input type="email" class="form-control" placeholder="Email" required>
+            <input type="tel" class="form-control" placeholder="Contact" required>
+            <textarea class="form-control" placeholder="Describe your issue" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        function toggleFlip() {
+            document.getElementById('flip-card').classList.toggle('flipped');
+        }
+    </script>
 </body>
 </html>

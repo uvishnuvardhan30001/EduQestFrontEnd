@@ -3,10 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('images/background.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: #f0f0f0;
     color: #333;
 }
 
@@ -23,11 +20,11 @@ header {
     align-items: center;
     padding: 0.5rem 1rem;
     height: 60px;
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 .logo img {
-    height: 70px;
+    height: 100px;
 }
 
 .nav-links {
@@ -41,83 +38,23 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #000;
     font-size: 18px;
 }
 
 .nav-links a:hover {
-    color: yellow;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-/* About Section */
-.about-section {
-    padding: 100px 20px;
-    text-align: center;
-    color: white;  /* Text color to contrast with the background */
-}
-
-.about-section h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.about-section p {
-    font-size: 20px;
-}
-
-/* Contact Section */
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.contact-form {
-    width: 300px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #555;
+    color: #00b7ff;
 }
 
 /* Flip Card Styles */
 .flip-card {
     width: 400px;
-    height: 600px; /* Increased height for better layout */
+    height: 500px;
     perspective: 1000px;
-    margin: 50px auto; /* Center the flip card with margin */
+    margin: 50px auto;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center vertically */
+    align-items: center;
 }
 
 .flip-card-inner {
@@ -142,7 +79,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Lighter background for readability */
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -152,57 +89,57 @@ header {
     transform: rotateY(180deg);
 }
 
-/* Form Styles */
+/* Form Control Styles */
 .form-control {
-    width: 100%;
+    width: 93%;
     margin-bottom: 15px;
-    padding: 10px; /* Added padding for better input field aesthetics */
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
+/* Button Styles */
 button {
+    width: 30%;
     border-radius: 5px;
-    padding: 10px 20px; /* Increased button padding */
-    font-size: 16px; /* Increased font size for readability */
+    padding: 10px;
+    font-size: 16px;
     cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555; /* Hover effect */
+    background-color: #555;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-form {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        color: white;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
     .flip-card {
-        width: 90%; /* Adjust width for smaller screens */
-        height: auto; /* Allow height to adjust automatically */
+        width: 90%;
     }
-    
-    /* Adjust input fields for mobile view */
-    .form-control {
-        padding: 8px; /* Smaller padding for mobile */
-    }
-    
-    button {
-        padding: 8px 16px; /* Smaller button padding for mobile */
+
+    .contact-form {
+        width: 90%;
     }
 }
