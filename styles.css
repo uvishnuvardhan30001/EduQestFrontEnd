@@ -3,7 +3,11 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url(/EduQestFrontEnd/images/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
     color: #333;
 }
 
@@ -38,7 +42,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: #2f4041;
     font-size: 18px;
 }
 
@@ -79,10 +83,10 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color:rgba(176, 143, 143, 0.7);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 234, 255, 0.7);
 }
 
 .flip-card-back {
@@ -113,7 +117,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #000000;
 }
 
 /* Contact Section */
@@ -125,21 +129,91 @@ button:hover {
 }
 
 .contact-form {
-    width: 300px;
-    background-color: #fff;
+    width: 400px;
+    background-color: rgba(176, 143, 143, 0.7);
     padding: 20px;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 234, 255, 0.7);
+}
+
+/* About Section Styles */
+.sections-container {
+    display: flex; /* Use flexbox to align sections side by side */
+    justify-content: space-around; /* Distribute space evenly */
+    padding: 20px; /* Add padding around the sections */
+}
+
+.about-section, .mission-section, .vision-section {
+    padding: 40px 20px;
+    background-color: rgba(176, 143, 143, 0.7);
+    border-radius: 10px;
+    max-width: 300px; /* Adjust max-width for better side-by-side alignment */
+    box-shadow: 0 4px 10px rgba(0, 234, 255, 0.7);
+    margin: 10px; /* Add margin to space sections apart */
+    flex: 1; /* Allow sections to grow equally */
+}
+
+.about-section h1, .mission-section h2, .vision-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-section p, .mission-section p, .vision-section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .flip-card {
-        width: 90%;
+    .sections-container {
+        flex-direction: column; /* Stack sections on small screens */
+        align-items: center; /* Center sections */
     }
 
-    .contact-form {
-        width: 90%;
+    .about-section, .mission-section, .vision-section {
+        max-width: 90%; /* Adjust width for small screens */
     }
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px; /* Adjust padding as needed */
+    background-color: #e9ecef; /* Light background color */
+}
+
+footer {
+    background-color:  rgba(255, 255, 255, 0.7); /* Light footer background */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-media h2 {
+    margin: 10px 0;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the icons */
+}
+
+.social-media li {
+    margin: 0 15px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333; /* Icon color */
+    font-size: 18px; /* Adjust size as needed */
+}
+
+.social-media a i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.social-media a:hover {
+    color: #007bff; /* Change color on hover */
 }
