@@ -24,7 +24,7 @@ header {
     align-items: center;
     padding: 0.5rem 1rem;
     height: 60px;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 .logo img {
@@ -42,7 +42,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #2f4041;
+    color: #ffffff;
     font-size: 18px;
 }
 
