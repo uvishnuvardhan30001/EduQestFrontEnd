@@ -8,7 +8,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url(/EduQestFrontEnd/images/Background.png);
+    background-image: url(/EduQuestFrontEnd/images/Background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -17,206 +17,225 @@ body, html {
 }
 
 /* Top Navbar */
-.top-navbar {
-    background-color: #343a40;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.content {
-    margin-left: 220px;
-    padding: 20px;
-}
-.card {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.card-img-top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-.card-title {
-    color: #003366;
-    font-weight: bold;
-}
-.card-text {
-    color: #555;
-}
-  /* Success message styling */
-  .success-message {
-    display: none;
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 20px;
-    text-align: center;
+.navbar-dark {
+    background: linear-gradient(145deg, #1b1b1b, #3a3a3a);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    padding: 10px 0;
 }
 
-.profile-card {
-    max-width: 400px;
-    margin: auto;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-.profile-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-.profile-info h5 {
-    color: #003366;
-}
-.profile-info p {
-    margin: 5px 0;
-    color: #555;
-}
-.btn-primary {
-    background-color: #ffffff;
-    border: none;
-    font-weight: bold;
-}
-.btn-primary:hover {
-    background-color: #003366;
-}
-.top-navbar .logo img {
-    width: 150px;
-    height: auto;
-}
-
-.top-navbar .top-nav-links ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.top-navbar .top-nav-links ul li {
-    margin: 0 15px;
-}
-
-.top-navbar .top-nav-links ul li a {
-    color: #f8f9fa;
-    text-decoration: none;
+.navbar-dark .navbar-nav .nav-link {
+    color: #ddd;
+    font-size: 16px;
     padding: 10px 15px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 8px;
+    margin: 0 5px;
 }
 
-.top-navbar .top-nav-links ul li a:hover {
-    background-color: #495057;
-    color: #ffde59;
+.navbar-dark .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(6px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #505050;
+    box-shadow: 0 6px 10px rgb(255, 255, 255);
+    transform: translateY(-3px);
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Side Navbar */
 .side-navbar {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 240px;
-    height: 100vh;
-    position: fixed;
+    width: 250px;
+    min-height: 100vh;
+    background: linear-gradient(145deg, #2c2c2c, #1b1b1b);
+    box-shadow: 5px 0 15px rgb(0, 0, 0);
+    padding-top: 20px;
+    color: #eee;
+}
+
+.side-navbar .nav-link {
+    color: #ddd;
+    font-size: 18px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.side-navbar .nav-link::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
-    padding-top: 60px;
-    z-index: 100;
-    transition: width 0.3s ease;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
 }
 
-.side-navbar:hover {
-    box-shadow: 4px 0 8px rgba(255, 225, 0, 0.765);
+.side-navbar .nav-link:hover::before {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-.side-navbar ul {
-    list-style: none;
-    padding: 0;
+.side-navbar .nav-link:hover {
+    background-color: #404040;
+    color: #fff;
+    box-shadow: 0 8px 15px rgb(255, 255, 255);
+    transform: translateY(-3px);
 }
 
-.side-navbar ul li {
-    padding: 20px;
+.side-navbar .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.side-navbar ul li a {
-    color: #f8f9fa;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.side-navbar ul li a i {
-    margin-right: 15px;
-}
-
-.side-navbar ul li a:hover {
-    background-color: #ffde59;
-    color: #2c2f33;
-    transform: scale(1.05);
-}
-
-/* Main Content */
-/* Main Content */
 .content {
-    margin-left: 240px;
+    margin-left: 250px;
     padding: 20px;
-    background: none; /* Remove background color */
+    background: none;
     border-radius: 10px;
     flex-grow: 1;
 }
-
-
-h1 {
-    text-align: center;
-    color: #000000;
+/* General Styles for Course Cards */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between cards */
 }
 
-/* Dashboard Styles */
+.card-img-top {
+    height: 200px; /* Adjust height for the image */
+    object-fit: cover; /* Ensure the image fits well */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-body {
+    padding: 15px; /* Reduce padding for a more compact look */
+}
+
+.card-title {
+    color: #003366;
+    font-weight: bold;
+    font-size: 18px; /* Reduce the font size */
+}
+
+.card-text {
+    color: #555;
+    font-size: 14px; /* Reduce font size */
+}
+
+/* Flexbox Layout for Course Cards */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    flex: 1 1 32%; /* Force the cards to be 32% of the row width, leaving space between them */
+    max-width: 32%; /* Ensures cards do not stretch beyond 32% */
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+@media (max-width: 768px) {
+    .col {
+        flex: 1 1 48%; /* 2 cards per row on medium screens */
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .col {
+        flex: 1 1 100%; /* Stack the cards vertically for smaller screens */
+        max-width: 100%;
+    }
+}
+
+
+/* Main Dashboard Content */
+/* Main Dashboard Content */
+/* Main Dashboard Content */
+.content {
+    background-color: #f4f6f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 240px); /* Adjusts width considering the sidebar */
+    margin-left: -10px; /* Aligns content close to the sidebar */
+}
+
+/* Dashboard Container */
 .dashboard-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
     justify-content: space-around;
 }
-p
-{
-    color: white;
-}
+
 /* Dashboard Box */
 .dashboard-box {
-    background-color: rgba(41, 41, 61, 0.9); /* Slight transparency */
-    border-radius: 8px;
-    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 250px;
+    padding: 20px;
+    width: 22%; /* Allows four boxes to fit in one row */
+    min-width: 20px;
+    transition: transform 0.3s ease;
 }
 
+.dashboard-box:hover {
+    transform: translateY(-10px);
+}
 
 .dashboard-box h3 {
-    color: #ffffff;
-    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
 }
 
+.dashboard-box p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Circular Progress Ring */
 .progress-ring {
     position: relative;
-    display: inline-block;
     width: 120px;
     height: 120px;
+    margin: 0 auto 10px;
 }
 
 .progress-ring svg {
@@ -225,190 +244,30 @@ p
 
 .progress-ring circle {
     fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
+    stroke-width: 8;
+    r: 50;
+    cx: 60;
+    cy: 60;
 }
 
-.progress-ring circle.bg {
-    stroke: #414157;
+.progress-ring .bg {
+    stroke: #eee;
 }
 
-.progress-ring circle.progress {
-    stroke: #007bff;
+.progress-ring .progress {
+    stroke: #4CAF50;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
 }
 
+/* Percentage Text */
 .percentage {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
-}
-
-/* Flip Card Styles */
-.flip-card {
-    width: 400px;
-    height: 500px;
-    perspective: 1000px;
-    margin: 50px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(176, 143, 143, 0.7);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 20px rgba(0, 234, 255, 0.7);
-}
-
-.flip-card-back {
-    transform: rotateY(180deg);
-}
-
-/* Form Control Styles */
-.form-control {
-    width: 93%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Button Styles */
-button {
-    width: 30%;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #343a40;
-    color: white;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #000000;
-}
-
-/* Contact Section */
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-}
-
-.contact-form {
-    width: 400px;
-    background-color: rgba(176, 143, 143, 0.7);
-    padding: 20px;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 234, 255, 0.7);
-}
-
-/* About Section Styles */
-.sections-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.about-section, .mission-section, .vision-section {
-    padding: 40px 20px;
-    background-color: rgba(176, 143, 143, 0.7);
-    border-radius: 10px;
-    max-width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 234, 255, 0.7);
-    margin: 10px;
-    flex: 1;
-}
-
-.about-section h1, .mission-section h2, .vision-section h2 {
     color: #333;
-    margin-bottom: 15px;
-}
-
-.about-section p, .mission-section p, .vision-section p {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sections-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-section, .mission-section, .vision-section {
-        max-width: 90%;
-    }
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #e9ecef;
-}
-
-/* Footer */
-footer {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer .social-media h2 {
-    margin: 10px 0;
-}
-
-footer .social-media ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-}
-
-footer .social-media ul li {
-    margin: 0 15px;
-}
-
-footer .social-media ul li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-footer .social-media ul li a:hover {
-    color: #007bff;
 }
